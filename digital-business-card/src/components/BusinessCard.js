@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faInstagram, faFacebook, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+const openLink = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
+
 const BusinessCard = () => {
   return (
     <div className="card">
@@ -13,10 +17,10 @@ const BusinessCard = () => {
         <h2>Full Stack Developer</h2>
       </div>
       <div className="card-body">
-        <button className="contact-button">
+        <button className="contact-button" onClick={() => openLink('mailto:arcadej@hotmail.fr')}>
           <FontAwesomeIcon icon={faEnvelope} /> Email
         </button>
-        <button className="contact-button">
+        <button className="contact-button" onClick={() => openLink('https://www.linkedin.com/in/johannes-cutt-aa122a311/')}>
           <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
         </button>
         <h3>About</h3>
@@ -25,16 +29,16 @@ const BusinessCard = () => {
         <p>In my free time, I love to explore new programming languages, contribute to open source projects, and play video games. I am also an avid reader and enjoy hiking.</p>
       </div>
       <div className="card-footer">
-        <a href="https://www.instagram.com/arcadekakpo" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/arcadejkakpo/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} />
         </a>
-        <a href="https://www.facebook.com/arcadekakpo" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/kakpo.johannes/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} />
         </a>
-        <a href="https://github.com/arcadekakpo" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/arcadejk" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://twitter.com/arcadekakpo" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/Seera2227236656" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faTwitter} />
         </a>
       </div>
